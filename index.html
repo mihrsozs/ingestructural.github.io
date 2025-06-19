@@ -46,11 +46,39 @@
       left: 50%;
       transform: translate(-50%, -50%);
       background-color: rgba(0, 0, 0, 0.6);
-      padding: 20px 30px;
-      border-radius: 5px;
+      padding: 30px 30px 0px;
+      border-radius: 10px;
       color: #fff;
       text-align: center;
       z-index: 2;
+      max-width: 100%;
+      width: fit-content;
+
+      /* Animación */
+      opacity: 0;
+      animation: fadeSlideDown 2s ease-out forwards;
+    }
+
+    @keyframes fadeSlideDown {
+      from {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+      }
+      to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    .header-content h1 {
+      font-size: 1.8rem;
+    }
+
+    .header-content h2 {
+      font-weight: 400;
+      font-size: 1.0rem;
+      margin-top: 5px;
+      color: #838383;
     }
 
     nav {
@@ -61,6 +89,7 @@
       position: sticky;
       top: 0;
       z-index: 10;
+      flex-wrap: wrap;
     }
 
     nav a {
@@ -75,8 +104,8 @@
     }
 
     section {
-      padding: 60px 20px;
-      max-width: 900px;
+      padding: 40px 20px;
+      max-width: 1000px;
       margin: 0 auto;
     }
 
@@ -142,6 +171,51 @@
       text-align: center;
       padding: 20px;
     }
+
+    @media (max-width: 600px) {
+      header {
+        height: 180px;
+      }
+
+      .header-content {
+        padding: 15px 20px;
+        font-size: 0.9rem;
+      }
+
+      .header-content h1 {
+        font-size: 1.3rem;
+      }
+
+      .header-content h2 {
+        font-size: 1rem;
+      }
+
+      nav {
+        padding: 10px 0;
+      }
+
+      nav a {
+        margin: 10px 8px;
+        font-size: 0.9rem;
+      }
+
+      section {
+        padding: 40px 15px;
+      }
+
+      .galeria img {
+        height: 160px;
+      }
+
+      .boton-contacto {
+        padding: 10px 18px;
+        font-size: 0.9rem;
+      }
+
+      .social-links a {
+        font-size: 1.2rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -150,7 +224,7 @@
     <img src="primera.jpg" alt="Imagen destacada de ingeniería estructural">
     <div class="header-content">
       <h1>Ingeniería Civil Estructural</h1>
-      <p>Ing. Matías Hernández Rojas</p>
+      <h2>Ing. Matías Hernández Rojas</h2>
     </div>
   </header>
 
