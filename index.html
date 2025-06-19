@@ -46,15 +46,13 @@
       left: 50%;
       transform: translate(-50%, -50%);
       background-color: rgba(0, 0, 0, 0.6);
-      padding: 30px 30px 0px;
+      padding: 30px 30px 10px;
       border-radius: 10px;
       color: #fff;
       text-align: center;
       z-index: 2;
       max-width: 100%;
       width: fit-content;
-
-      /* Animación */
       opacity: 0;
       animation: fadeSlideDown 2s ease-out forwards;
     }
@@ -71,14 +69,16 @@
     }
 
     .header-content h1 {
-      font-size: 1.8rem;
+      font-size: clamp(1.2rem, 4vw, 1.8rem);
+      white-space: nowrap;     /* 👉 evita saltos de línea */
     }
 
     .header-content h2 {
-      font-weight: 400;
-      font-size: 1.0rem;
-      margin-top: 5px;
-      color: #838383;
+      font-weight: 100;
+      font-size: clamp(0.5rem, 4vw, 1rem);
+      margin-top: 8px;
+      white-space: nowrap;
+      color: #ffffff;
     }
 
     nav {
@@ -87,7 +87,7 @@
       justify-content: center;
       padding: 20px 0;
       position: sticky;
-      top: 0;
+      top: 1;
       z-index: 10;
       flex-wrap: wrap;
     }
@@ -100,7 +100,7 @@
     }
 
     nav a:hover {
-      color: #000000;
+      color: #ff0000;
     }
 
     section {
@@ -113,6 +113,14 @@
       text-align: justify;
     }
 
+    #proyectos li {
+      text-align: justify;
+    }
+
+    #eventos p {
+      text-align: justify;
+    }   
+
     h2 {
       color: #000000;
       margin-bottom: 20px;
@@ -120,7 +128,7 @@
 
     ul {
       list-style: disc;
-      padding-left: 30px;
+      padding-left: 50px;
       line-height: 1.5;
     }
 
@@ -159,7 +167,8 @@
 
     .galeria img {
       width: 100%;
-      height: 200px;
+      height: auto;
+      aspect-ratio: 4/3;
       object-fit: cover;
       border-radius: 8px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -204,7 +213,7 @@
       }
 
       .galeria img {
-        height: 160px;
+        aspect-ratio: 4 / 3;
       }
 
       .boton-contacto {
@@ -223,8 +232,8 @@
   <header>
     <img src="primera.jpg" alt="Imagen destacada de ingeniería estructural">
     <div class="header-content">
-      <h1>Ingeniería Civil Estructural</h1>
-      <h2>Ing. Matías Hernández Rojas</h2>
+      <h1>MiHR | Ingeniería Estructural</h1>
+      <h2>"Diseñamos estructuras, compartimos conocimiento"</h2>
     </div>
   </header>
 
@@ -238,7 +247,7 @@
 
   <section id="sobre-mi">
     <h2>Sobre mí</h2>
-    <p>Soy Ingeniero Civil Estructural con especialización en diseño sísmico y amplia experiencia en el desarrollo de proyectos para la industria, telecomunicaciones, energía y sector privado. Me he enfocado en el diseño estructural de soluciones en acero, hormigón, madera y perfiles conformados, integrando herramientas de modelación avanzada como SAP2000, Tekla Structures e IDEA StatiCa para el análisis, diseño y documentación técnica de estructuras.
+    <p>Ingeniero Civil Estructural con especialización en diseño sísmico y experiencia en el desarrollo de proyectos para la industria de telecomunicaciones, energía y sector privado. Me he enfocado en el diseño estructural de soluciones en acero, hormigón, madera y perfiles conformados en frio, integrando herramientas de modelación avanzada como SAP2000, Tekla Structures e IDEA StatiCa para el análisis, diseño y documentación técnica de estructuras.
 
 A lo largo de mi carrera he participado en proyectos que requieren un alto grado de precisión y cumplimiento normativo, aplicando estándares nacionales e internacionales. También realizo asesorías técnicas, evaluaciones estructurales, y capacitaciones personalizadas orientadas a profesionales y estudiantes que buscan fortalecer sus competencias en ingeniería estructural.
 
@@ -249,7 +258,7 @@ Mi compromiso es brindar soluciones eficientes, seguras y adaptadas a las necesi
     <h2>Servicios</h2>
     <ul>
       <li>Diseño estructural en acero, hormigón armado, madera y perfiles conformados en frío.</li>
-      <li>Modelación numérica avanzada, incluyendo análisis lineal, no lineal y dinámico.</li>
+      <li>Modelación numérica avanzada, incluyendo análisis lineal y no lineal.</li>
       <li>Modelado 3D de estructuras para visualización y documentación de proyectos.</li>
       <li>Diseño y verificación de conexiones en acero, aplicando normativa nacional e internacional.</li>
       <li>Asesorías técnicas y evaluaciones estructurales, tanto para estructuras nuevas como existentes.</li>
@@ -259,7 +268,10 @@ Mi compromiso es brindar soluciones eficientes, seguras y adaptadas a las necesi
 
   <section id="proyectos">
     <h2>Proyectos destacados</h2>
-    <p>Aquí puedes mostrar imágenes o descripciones de tus proyectos más representativos. Puedes usar capturas de modelos de Tekla, SAP2000, IDEA StatiCa o imágenes de obras reales.</p>
+    <ul>
+      <li>Calibración numérica de cuatro modelos de conexiones viga-columna de acero utilizando perfiles T soldados empleando MEF (Proyecto Fondecyt N°1140628 “Double Welded T Moment Connections”)</li>
+      <li>Desarrollador de la programación para una APP de escritorio utilizando Python con el objetivo de automatizar el proceso de selección del material de filtro para la construcción de muros de enrocado y empréstito.</li>
+    </ul>
     <div class="galeria">
       <img src="FOTO1.jpg" alt="Proyecto 1">
       <img src="FOTO4.jpg" alt="Proyecto 2">
@@ -278,6 +290,7 @@ Mi compromiso es brindar soluciones eficientes, seguras y adaptadas a las necesi
     <div class="galeria">
       <img src="primera.jpg" alt="Evento 1">
       <img src="primera.jpg" alt="Evento 2">
+      <img src="primera.jpg" alt="Evento 3">
     </div>
   </section>
 
@@ -293,7 +306,7 @@ Mi compromiso es brindar soluciones eficientes, seguras y adaptadas a las necesi
   </section>
 
   <footer>
-    <p>&copy; 2025 Ingeniería Estructural</p>
+    <p>&copy; 2025 - MiHR | Ingeniería Estructural</p>
   </footer>
 
 </body>
