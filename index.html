@@ -46,15 +46,17 @@
       left: 50%;
       transform: translate(-50%, -50%);
       background-color: rgba(0, 0, 0, 0.6);
-      padding: 30px 30px 10px;
+      padding: 15px 20px 0px;
       border-radius: 10px;
       color: #fff;
       text-align: center;
       z-index: 2;
-      max-width: 100%;
-      width: fit-content;
+      max-width: 90%;
+      width: 100%;
+      max-width: 560px;
+      box-sizing: border-box;
       opacity: 0;
-      animation: fadeSlideDown 2s ease-out forwards;
+      animation: fadeSlideDown 1s ease-out forwards;
     }
 
     @keyframes fadeSlideDown {
@@ -69,16 +71,42 @@
     }
 
     .header-content h1 {
-      font-size: clamp(1.2rem, 4vw, 1.8rem);
-      white-space: nowrap;     /* 👉 evita saltos de línea */
+      font-size: 1.2rem;
+      margin-bottom: 6px;
+      white-space: normal;
+      opacity: 0;
+      animation: fadeInSequential 1s ease-out forwards;
+      animation-delay: 1s;
     }
 
     .header-content h2 {
-      font-weight: 100;
-      font-size: clamp(0.5rem, 4vw, 1rem);
-      margin-top: 8px;
-      white-space: nowrap;
+      font-weight: 400;
+      font-size: 1rem;
       color: #ffffff;
+      opacity: 0;
+      animation: fadeInSequential 1s ease-out forwards;
+      animation-delay: 1.5s;
+    }
+
+    @media (max-width: 600px) {
+      .header-content h1 {
+        font-size: 1rem;
+      }
+
+      .header-content h2 {
+        font-size: 0.9rem;
+      }
+    }
+
+    @keyframes fadeInSequential {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     nav {
@@ -113,14 +141,6 @@
       text-align: justify;
     }
 
-    #proyectos li {
-      text-align: justify;
-    }
-
-    #eventos p {
-      text-align: justify;
-    }   
-
     h2 {
       color: #000000;
       margin-bottom: 20px;
@@ -128,9 +148,18 @@
 
     ul {
       list-style: disc;
-      padding-left: 50px;
+      padding-left: 30px;
       line-height: 1.5;
     }
+
+    #proyectos ul li {
+      margin-bottom: 12px;
+    }
+
+    #eventos p {
+      margin-bottom: 16px;
+  }
+
 
     .boton-contacto {
       display: inline-block;
@@ -168,7 +197,7 @@
     .galeria img {
       width: 100%;
       height: auto;
-      aspect-ratio: 4/3;
+      aspect-ratio: 4 / 3;
       object-fit: cover;
       border-radius: 8px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -187,16 +216,7 @@
       }
 
       .header-content {
-        padding: 15px 20px;
-        font-size: 0.9rem;
-      }
-
-      .header-content h1 {
-        font-size: 1.3rem;
-      }
-
-      .header-content h2 {
-        font-size: 1rem;
+        padding: 15px 15px;
       }
 
       nav {
@@ -229,85 +249,85 @@
 </head>
 <body>
 
-  <header>
-    <img src="primera.jpg" alt="Imagen destacada de ingeniería estructural">
-    <div class="header-content">
-      <h1>MiHR | Ingeniería Estructural</h1>
-      <h2>"Diseñamos estructuras, compartimos conocimiento"</h2>
-    </div>
-  </header>
+<header>
+  <img src="primera.jpg" alt="Imagen destacada de ingeniería estructural">
+  <div class="header-content">
+    <h1>MiHR | Ingeniería Estructural</h1>
+    <h2><em>Diseñamos estructuras, compartimos conocimiento</em></h2>
+  </div>
+</header>
 
-  <nav>
-    <a href="#sobre-mi">Sobre mí</a>
-    <a href="#servicios">Servicios</a>
-    <a href="#proyectos">Proyectos</a>
-    <a href="#eventos">Eventos próximos</a>
-    <a href="#contacto">Contacto</a>
-  </nav>
+<nav>
+  <a href="#sobre-mi">Sobre mí</a>
+  <a href="#servicios">Servicios</a>
+  <a href="#proyectos">Proyectos</a>
+  <a href="#eventos">Eventos próximos</a>
+  <a href="#contacto">Contacto</a>
+</nav>
 
-  <section id="sobre-mi">
-    <h2>Sobre mí</h2>
-    <p>Ingeniero Civil Estructural con especialización en diseño sísmico y experiencia en el desarrollo de proyectos para la industria de telecomunicaciones, energía y sector privado. Me he enfocado en el diseño estructural de soluciones en acero, hormigón, madera y perfiles conformados en frio, integrando herramientas de modelación avanzada como SAP2000, Tekla Structures e IDEA StatiCa para el análisis, diseño y documentación técnica de estructuras.
+<section id="sobre-mi">
+  <h2>Sobre mí</h2>
+  <p>Ingeniero Civil Estructural con especialización en diseño sísmico y experiencia en el desarrollo de proyectos para la industria de telecomunicaciones, energía y sector privado. Me he enfocado en el diseño estructural de soluciones en acero, hormigón, madera y perfiles conformados en frio, integrando herramientas de modelación avanzada como SAP2000, Tekla Structures e IDEA StatiCa para el análisis, diseño y documentación técnica de estructuras.
 
 A lo largo de mi carrera he participado en proyectos que requieren un alto grado de precisión y cumplimiento normativo, aplicando estándares nacionales e internacionales. También realizo asesorías técnicas, evaluaciones estructurales, y capacitaciones personalizadas orientadas a profesionales y estudiantes que buscan fortalecer sus competencias en ingeniería estructural.
 
 Mi compromiso es brindar soluciones eficientes, seguras y adaptadas a las necesidades específicas de cada cliente.</p>
-  </section>
+</section>
 
-  <section id="servicios">
-    <h2>Servicios</h2>
-    <ul>
-      <li>Diseño estructural en acero, hormigón armado, madera y perfiles conformados en frío.</li>
-      <li>Modelación numérica avanzada, incluyendo análisis lineal y no lineal.</li>
-      <li>Modelado 3D de estructuras para visualización y documentación de proyectos.</li>
-      <li>Diseño y verificación de conexiones en acero, aplicando normativa nacional e internacional.</li>
-      <li>Asesorías técnicas y evaluaciones estructurales, tanto para estructuras nuevas como existentes.</li>
-      <li>Capacitación profesional personalizada, dirigida a estudiantes y profesionales.</li>
-    </ul>
-  </section>
+<section id="servicios">
+  <h2>Servicios</h2>
+  <ul>
+    <li>Diseño estructural en acero, hormigón armado, madera y perfiles conformados en frío.</li>
+    <li>Modelación numérica avanzada, incluyendo análisis lineal y no lineal.</li>
+    <li>Modelado 3D de estructuras para visualización y documentación de proyectos.</li>
+    <li>Diseño y verificación de conexiones en acero, aplicando normativa nacional e internacional.</li>
+    <li>Asesorías técnicas y evaluaciones estructurales, tanto para estructuras nuevas como existentes.</li>
+    <li>Capacitación profesional personalizada, dirigida a estudiantes y profesionales.</li>
+  </ul>
+</section>
 
-  <section id="proyectos">
-    <h2>Proyectos destacados</h2>
-    <ul>
-      <li>Calibración numérica de cuatro modelos de conexiones viga-columna de acero utilizando perfiles T soldados empleando MEF (Proyecto Fondecyt N°1140628 “Double Welded T Moment Connections”)</li>
-      <li>Desarrollador de la programación para una APP de escritorio utilizando Python con el objetivo de automatizar el proceso de selección del material de filtro para la construcción de muros de enrocado y empréstito.</li>
-    </ul>
-    <div class="galeria">
-      <img src="FOTO1.jpg" alt="Proyecto 1">
-      <img src="FOTO4.jpg" alt="Proyecto 2">
-      <img src="FOTO3.jpg" alt="Proyecto 3">
-    </div>
-  </section>
+<section id="proyectos">
+  <h2>Proyectos destacados</h2>
+  <ul>
+    <li>Calibración numérica de cuatro modelos de conexiones viga-columna de acero utilizando perfiles T soldados empleando MEF (Proyecto Fondecyt N°1140628 “Double Welded T Moment Connections”)</li>
+    <li>Desarrollador de la programación para una APP de escritorio utilizando Python con el objetivo de automatizar el proceso de selección del material de filtro para la construcción de muros de enrocado y empréstito.</li>
+  </ul>
+  <div class="galeria">
+    <img src="FOTO1.jpg" alt="Proyecto 1">
+    <img src="FOTO4.jpg" alt="Proyecto 2">
+    <img src="FOTO3.jpg" alt="Proyecto 3">
+  </div>
+</section>
 
-  <section id="eventos">
-    <h2>Eventos próximos</h2>
-    <p>Próximamente estaré participando en diversas actividades relacionadas con la ingeniería estructural. Aquí compartiré talleres, charlas, cursos y otras instancias en las que puedes sumarte o invitarme a colaborar.</p>
-    <ul>
-      <li><strong>Julio 2025:</strong> Taller de Modelación 3D en Tekla Structures</li>
-      <li><strong>Agosto 2025:</strong> Webinar gratuito sobre diseño de conexiones en acero con IDEA StatiCa</li>
-      <li><strong>Septiembre 2025:</strong> Curso intensivo de diseño sísmico aplicado a estructuras metálicas</li>
-    </ul>
-    <div class="galeria">
-      <img src="primera.jpg" alt="Evento 1">
-      <img src="primera.jpg" alt="Evento 2">
-      <img src="primera.jpg" alt="Evento 3">
-    </div>
-  </section>
+<section id="eventos">
+  <h2>Eventos próximos</h2>
+  <p>Próximamente estaré participando en diversas actividades relacionadas con la ingeniería estructural. Aquí compartiré talleres, charlas, cursos y otras instancias en las que puedes sumarte o invitarme a colaborar.</p>
+  <ul>
+    <li><strong>Julio 2025:</strong> Taller de Modelación 3D en Tekla Structures</li>
+    <li><strong>Agosto 2025:</strong> Webinar gratuito sobre diseño de conexiones en acero con IDEA StatiCa</li>
+    <li><strong>Septiembre 2025:</strong> Curso intensivo de diseño sísmico aplicado a estructuras metálicas</li>
+  </ul>
+  <div class="galeria">
+    <img src="primera.jpg" alt="Evento 1">
+    <img src="primera.jpg" alt="Evento 2">
+    <img src="primera.jpg" alt="Evento 3">
+  </div>
+</section>
 
-  <section id="contacto">
-    <h2>Contacto</h2>
-    <p>¿Tienes un proyecto o necesitas asesoría? Escríbeme directamente:</p>
-    <a class="boton-contacto" href="https://linktr.ee/ing.estructural">Contáctame</a>
-    <div class="social-links">
-      <a href="https://www.instagram.com/ing.estructural" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://www.linkedin.com/in/mihr" target="_blank"><i class="fab fa-linkedin"></i></a>
-      <a href="https://www.patreon.com/c/user?u=80111397" target="_blank"><i class="fab fa-patreon"></i></a>
-    </div>
-  </section>
+<section id="contacto">
+  <h2>Contacto</h2>
+  <p>¿Tienes un proyecto o necesitas asesoría? Escríbeme directamente:</p>
+  <a class="boton-contacto" href="https://linktr.ee/ing.estructural">Contáctame</a>
+  <div class="social-links">
+    <a href="https://www.instagram.com/ing.estructural" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.linkedin.com/in/mihr" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <a href="https://www.patreon.com/c/user?u=80111397" target="_blank"><i class="fab fa-patreon"></i></a>
+  </div>
+</section>
 
-  <footer>
-    <p>&copy; 2025 - MiHR | Ingeniería Estructural</p>
-  </footer>
+<footer>
+  <p>&copy; 2025 - MiHR | Ingeniería Estructural</p>
+</footer>
 
 </body>
 </html>
