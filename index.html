@@ -45,7 +45,7 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      background-color: rgba(0, 0, 0, 0.493);
+      background-color: rgba(0, 0, 0, 0);
       padding: 15px 20px 0px;
       border-radius: 10px;
       color: #ffffff;
@@ -56,7 +56,7 @@
       max-width: 260px;
       box-sizing: border-box;
       opacity: 0;
-      animation: fadeSlideDown 1s ease-out forwards;
+      animation: fadeSlideDown 0.5s ease-out forwards;
     }
 
     @keyframes fadeSlideDown {
@@ -71,17 +71,18 @@
     }
 
     .header-content h1 {
-      font-size: 2.5rem;
+      font-size: 3.5rem;
       margin-bottom: 6px;
+      color: #ffffff;
       white-space: normal;
       opacity: 0;
-      animation: fadeInSequential 1s ease-out forwards;
+      animation: fadeInSequential 0.75s ease-out forwards;
       animation-delay: 1s;
     }
 
     .header-content h2 {
       font-weight: 400;
-      font-size: 0.8rem;
+      font-size: 1rem;
       color: #ffffff;
       opacity: 0;
       animation: fadeInSequential 1s ease-out forwards;
@@ -90,11 +91,11 @@
 
     @media (max-width: 600px) {
       .header-content h1 {
-        font-size: 2rem;
+        font-size: 3rem;
       }
 
       .header-content h2 {
-        font-size: 0.7rem;
+        font-size: 0.85rem;
       }
     }
 
@@ -118,6 +119,7 @@
       top: 1;
       z-index: 10;
       flex-wrap: wrap;
+      font-size: 1rem;
     }
 
     nav a {
@@ -128,7 +130,7 @@
     }
 
     nav a:hover {
-      color: #3362AC;
+      color: #0062ff;
     }
 
     section {
@@ -160,28 +162,28 @@
 
     @media (max-width: 600px) {
       #sobre-mi p {
-        font-size: 0.85rem;
+        font-size: 0.95rem;
       }
 
       #servicios li {
-        font-size: 0.85rem;
+        font-size: 0.95rem;
 
       }
       #eventos p {
-        font-size: 0.85rem;
+        font-size: 0.95rem;
       }
       #eventos li {
-        font-size: 0.85rem;
+        font-size: 0.95rem;
       }
 
       #contacto p {
-        font-size: 0.85rem;
+        font-size: 0.95rem;
       }
 
       h2 {
-        font-size: 1.25rem;
+        font-size: 1.35rem;
       }
-
+      
     }
     
     h2 {
@@ -296,7 +298,7 @@
   <img src="FOTOPRIN.jpg" alt="Imagen destacada de ingeniería estructural">
   <div class="header-content">
     <h1>| MiHR |</h1>
-    <h2>Matías Hernández Rojas<br><i>Ingeniero Civil</i></h2>
+    <h2>Matías Hernández Rojas<br><i>Ingeniero Civil Estructural</i></h2>
   </div>
 </header>
 
