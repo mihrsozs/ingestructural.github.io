@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Videos, talleres y recursos de ingeniería estructural de MiHR."><title>Videos y recursos | MiHR</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css"><script src="site.js" defer></script>
+</head><body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="site-header"><div class="container nav-wrap"><a class="brand" href="index.html">MiHR <span>|</span> Ingeniería Estructural</a><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menú</button><nav class="site-nav" id="site-nav" aria-label="Navegación principal"><a href="index.html#sobre-mi">Sobre mí</a><a href="index.html#servicios">Servicios</a><a href="index.html#talleres">Talleres</a><a href="videos.html" aria-current="page">Videos</a><a href="index.html#contacto">Contacto</a></nav></div></header>
+  <main id="contenido">
+    <section class="page-hero"><div class="container"><a class="back-link" href="index.html">← Volver al inicio</a><p class="eyebrow">Aprendizaje abierto</p><h1>Videos y recursos</h1><p>Contenido práctico sobre análisis, modelación y diseño estructural.</p></div></section>
+    <section class="section section-muted"><div class="container">
+      <div class="video-filters" role="group" aria-label="Filtrar videos"><button class="filter-button is-active" type="button" data-filter="todos" aria-pressed="true">Todos</button><button class="filter-button" type="button" data-filter="webinar" aria-pressed="false">Webinars</button><button class="filter-button" type="button" data-filter="taller" aria-pressed="false">Talleres</button><button class="filter-button" type="button" data-filter="tips" aria-pressed="false">Tips</button></div>
+      <div class="video-grid">
+        <article class="video-card" data-categoria="webinar"><iframe src="https://www.youtube.com/embed/UZsR_uAOKAc?start=2175" title="Webinar de diseño estructural" loading="lazy" allowfullscreen></iframe><div class="video-card-content"><h2>Webinar de diseño estructural</h2><p>Conceptos clave para comprender y comunicar decisiones de análisis sísmico.</p></div></article>
+        <article class="video-card" data-categoria="taller"><iframe src="https://www.youtube.com/embed/UZsR_uAOKAc?start=2175" title="Taller de Tekla Structures" loading="lazy" allowfullscreen></iframe><div class="video-card-content"><h2>Taller de Tekla Structures</h2><p>Introducción práctica al modelado 3D de estructuras de acero.</p></div></article>
+        <article class="video-card" data-categoria="tips"><iframe src="https://www.youtube.com/embed/UZsR_uAOKAc?start=2175" title="Tip de conexiones en acero" loading="lazy" allowfullscreen></iframe><div class="video-card-content"><h2>Tip: conexiones en acero</h2><p>Criterios iniciales para revisar una unión viga-columna.</p></div></article>
+      </div>
+    </div></section>
+  </main>
+  <footer class="site-footer"><div class="container footer-wrap"><p>© 2026 MiHR · Ingeniería Estructural</p><p><a href="index.html#contacto">Contacto</a></p></div></footer>
+  <script>
+    const buttons = document.querySelectorAll('[data-filter]');
+    const videos = document.querySelectorAll('[data-categoria]');
+    buttons.forEach((button) => button.addEventListener('click', () => {
+      const filter = button.dataset.filter;
+      buttons.forEach((item) => { item.classList.toggle('is-active', item === button); item.setAttribute('aria-pressed', String(item === button)); });
+      videos.forEach((video) => { video.hidden = filter !== 'todos' && video.dataset.categoria !== filter; });
+    }));
+  </script>
+</body></html>
