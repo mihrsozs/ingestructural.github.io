@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Videos, códigos y documentos de ingeniería estructural de MiHR."><title>Recursos | MiHR</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css"><script src="site.js" defer></script>
+</head><body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="site-header"><div class="container nav-wrap"><a class="brand" href="index.html">MiHR <span>|</span> Ingeniería Estructural</a><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menú</button><nav class="site-nav" id="site-nav" aria-label="Navegación principal"><a href="index.html#sobre-mi">Sobre mí</a><a href="index.html#servicios">Servicios</a><a href="index.html#talleres">Talleres</a><a href="recursos.html" aria-current="page">Recursos</a><a href="index.html#contacto">Contacto</a></nav></div></header>
+  <main id="contenido">
+    <section class="page-hero"><div class="container"><a class="back-link" href="index.html">← Volver al inicio</a><p class="eyebrow">Biblioteca técnica</p><h1>Recursos</h1><p>Videos, códigos y documentos para estudiar y aplicar herramientas de ingeniería estructural.</p></div></section>
+    <section class="section section-muted"><div class="container">
+      <div class="resource-intro">
+        <div><p class="eyebrow">Contenido disponible</p><h2>Explora los recursos</h2></div>
+        <p>Filtra el contenido según el formato que necesites. Esta biblioteca se irá ampliando con nuevos videos, notebooks, guías y material técnico.</p>
+      </div>
+
+      <div class="resource-filters" role="group" aria-label="Filtrar recursos">
+        <button class="filter-button is-active" type="button" data-filter="todos" aria-pressed="true">Todos</button>
+        <button class="filter-button" type="button" data-filter="video" aria-pressed="false">Videos</button>
+        <button class="filter-button" type="button" data-filter="codigo" aria-pressed="false">Códigos</button>
+        <button class="filter-button" type="button" data-filter="documento" aria-pressed="false">Documentos</button>
+      </div>
+
+      <div class="resource-grid" id="resource-grid">
+
+        <!-- <article class="resource-card" data-categoria="video">
+          <div class="resource-media"><iframe src="https://www.youtube.com/embed/azzVHoiyG0g" title="Diseño paso a paso de una placa base" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+          <div class="resource-card-content">
+            <p class="resource-type"><span aria-hidden="true">▶</span> Video · Webinar</p>
+            <h2>Diseño paso a paso de una placa base</h2>
+            <p>Sesión técnica sobre criterios de diseño, verificaciones y aspectos que conviene revisar al modelar una conexión de placa base.</p>
+            <a class="text-link resource-link" href="https://www.youtube.com/watch?v=azzVHoiyG0g" target="_blank" rel="noopener noreferrer">Ver en YouTube</a>
+          </div>
+        </article> -->
+
+        <article class="resource-card code-card" data-categoria="codigo">
+          <div class="code-card-preview" aria-label="Vista previa del recurso de Python">
+            <div class="code-filebar"><span class="code-dots" aria-hidden="true"><i></i><i></i><i></i></span><span></span></div>
+            <span class="code-symbol" aria-hidden="true">&lt;/&gt;</span>
+            <pre aria-hidden="true"><code><span class="code-comment"># MiHR | Ingeniería Estructural</span>
+<span class="code-keyword">Python</span> + NCh2369:2025
+
+Análisis modal espectral
+Jupyter Notebook
+<span class="code-accent">Exportación de resultados</span></code></pre>
+          </div>
+          <div class="resource-card-content">
+            <p class="resource-type"><span aria-hidden="true">&lt;/&gt;</span> Código · Jupyter Notebook</p>
+            <h2>Espectros NCh2369 (2025)</h2>
+            <p>Notebook para generar y visualizar espectros de diseño sísmico de instalaciones industriales.</p>
+            <a class="text-link resource-link" href="https://github.com/mihrsozs/nch2369-spectra-python/blob/main/NCh2369_2025v1.ipynb" target="_blank" rel="noopener noreferrer">Abrir en GitHub</a>
+          </div>
+        </article>
+
+        <article class="resource-card code-card" data-categoria="codigo">
+          <div class="code-card-preview" aria-label="Vista previa del recurso de Python">
+            <div class="code-filebar"><span class="code-dots" aria-hidden="true"><i></i><i></i><i></i></span><span></span></div>
+            <span class="code-symbol" aria-hidden="true">&lt;/&gt;</span>
+            <pre aria-hidden="true"><code><span class="code-comment"># MiHR | Ingeniería Estructural</span>
+<span class="code-keyword">Python</span> + API SAP2000
+
+Automatización con Python
+Jupyter Notebook
+<span class="code-accent">Primeros pasos</span></code></pre>
+          </div>
+          <div class="resource-card-content">
+            <p class="resource-type"><span aria-hidden="true">&lt;/&gt;</span> Código · Jupyter Notebook</p>
+            <h2>Conexión API SAP2000</h2>
+            <p>Notebook para conectarse a la API de SAP2000 con Python.</p>
+            <a class="text-link resource-link" href="https://github.com/mihrsozs/nch2369-spectra-python/blob/main/NCh2369_2025v1.ipynb" target="_blank" rel="noopener noreferrer">Abrir en GitHub</a>
+          </div>
+        </article>
+
+      
+      </div>
+
+      <p class="resource-empty" data-empty-state role="status" hidden>Aún no hay recursos publicados en esta categoría.</p>
+    </div></section>
+  </main>
+  <footer class="site-footer"><div class="container footer-wrap"><p>© 2026 MiHR · Ingeniería Estructural</p><p><a href="index.html#contacto">Contacto</a></p></div></footer>
+  <script>
+    const buttons = document.querySelectorAll('[data-filter]');
+    const resources = document.querySelectorAll('[data-categoria]');
+    const emptyState = document.querySelector('[data-empty-state]');
+    buttons.forEach((button) => button.addEventListener('click', () => {
+      const filter = button.dataset.filter;
+      let visibleResources = 0;
+      buttons.forEach((item) => { item.classList.toggle('is-active', item === button); item.setAttribute('aria-pressed', String(item === button)); });
+      resources.forEach((resource) => {
+        const isVisible = filter === 'todos' || resource.dataset.categoria === filter;
+        resource.hidden = !isVisible;
+        if (isVisible) visibleResources += 1;
+      });
+      emptyState.hidden = visibleResources !== 0;
+    }));
+  </script>
+</body></html>
